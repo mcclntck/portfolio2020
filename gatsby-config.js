@@ -27,6 +27,7 @@ module.exports = {
         resolve: 'gatsby-source-prismic-graphql',
         options: {
             repositoryName: 'jackmcclintock', // (REQUIRED, replace with your own)
+            accessToken: 'MC5YdW1xT2hJQUFDSUFwLWk0.N--_ve-_ve-_vQDvv73vv70r77-977-9eu-_vVHvv73vv71v77-977-977-9YiNl77-977-9Ue-_vQvvv71TAW3vv70',
             linkResolver: () => post => `/${post.uid}`,
         }
     },
