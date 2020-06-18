@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Jack McClintock | Portfolio 2020`,
-        description: `A newly built portfolio using GatsbyJS and React`,
-    author: `Jack McClintock | jackmcclintock.net`,
+    title: `Prist | Gatsby & Prismic Starter`,
+        description: `A starter powered by Gatsby and Prismic to showcase portfolios and blogs.`,
+    author: `Marguerite Roth | marguerite.io`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
