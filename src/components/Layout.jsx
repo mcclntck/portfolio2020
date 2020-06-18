@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
 import styled from "@emotion/styled";
 import { Global } from "@emotion/core";
 import globalStyles from 'styles/global';
@@ -31,19 +30,9 @@ const LayoutContainer = styled.div`
     }
 `;
 
+
 const Layout = ({ children }) => (
-    <StaticQuery
-        query={graphql`
-            query SiteTitleQuery {
-                site {
-                    siteMetadata {
-                        title
-                    }
-                }
-            }
-        `}
-        render={data => (
-            <LayoutContainer className="div">
+    <LayoutContainer className="div">
                 <Global styles={[globalStyles, typeStyles]} />
                 <div className="Layout">
                     <Header />
@@ -53,9 +42,17 @@ const Layout = ({ children }) => (
                     <Footer />
                 </div>
             </LayoutContainer>
-        )}
-    />
 )
+    
+export const query = graphql`
+        query SiteTitleQuery {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
